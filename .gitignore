@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Variables de entorno (contienen contraseñas)
+.env
+
+# Python
+*.pyc
+*.pyo
+
+# Node
+node_modules/
+
+# Base de datos local
+*.db
+*.sqlite3
+
+# IDEs
+.vscode/
+.idea/
