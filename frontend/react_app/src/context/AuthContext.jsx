@@ -1,3 +1,4 @@
+// src/context/AuthContext.jsx
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login as loginService, logout as logoutService } from "../services/authService";
@@ -5,8 +6,8 @@ import { login as loginService, logout as logoutService } from "../services/auth
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-  const [token, setToken] = useState(localStorage.getItem("token"));
-  const [role, setRole] = useState(localStorage.getItem("role"));
+  const [token, setToken] = useState(() => localStorage.getItem("token"));
+const [role, setRole] = useState(() => localStorage.getItem("role"));
   const navigate = useNavigate();
 
   const login = async (username, password) => {
